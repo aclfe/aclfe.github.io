@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Kairav Mittal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body class="relative">
+    
+    <nav class="fixed left-0 top-1/2 -translate-y-1/2 z-50 px-4 sm:px-6 lg:px-8">
+        <div class="vertical-nav flex flex-col items-center space-y-8">
+            <a href="#blogs" class="nav-link text-sm tracking-widest font-bold">Blogs</a>
+            <a href="index.html#about" class="nav-link text-sm tracking-widest">About Me</a>
+            <a href="index.html#projects" class="nav-link text-sm tracking-widest">Projects</a>
+            <a href="index.html" class="nav-link text-sm tracking-widest">Home</a>
+
+        </div>
+    </nav>
+
+    <aside class="fixed right-0 top-1/2 -translate-y-1/2 z-50 px-4 sm:px-6 lg:px-8">
+        <button id="dark-mode-toggle" class="vertical-nav nav-link text-sm tracking-widest dark-mode-toggle">dark mode.</button>
+    </aside>
+
+    <div class="absolute top-0 left-0 right-0 h-px bg-gray-300"></div>
+
+    <section id="blogs" class="section section-fade-in py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="mb-16">
+                <h2 class="font-pixel text-3xl sm:text-4xl md:text-5xl text-gray-800 mb-4">
+                    blog.posts
+                </h2>
+                <div class="w-16 h-1 bg-black"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <article class="blog-card bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <span class="text-white text-xl font-mono">f(x) = data</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <time datetime="2024-02-19">Feb 19, 2024</time>
+                            <span class="mx-2">•</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                            <a href="blogs/functions-run-everything.html" class="hover:text-gray-600 transition-colors">
+                                Functions Run Everything / Exploring cuML
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Exploring the fundamental role of data in machine learning and how GPU-accelerated libraries like cuML are changing the game for data processing and model training.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-gray-600">Machine Learning</span>
+                            <span class="text-gray-400">•</span>
+                            <span class="text-xs text-gray-600">Data Science</span>
+                            <span class="text-gray-400">•</span>
+                            <span class="text-xs text-gray-600">GPU</span>
+                        </div>
+                        <a href="blogs/functions-run-everything.html" class="text-gray-800 hover:text-gray-600 font-medium text-sm">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

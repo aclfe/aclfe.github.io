@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Run Everything - Kairav Mittal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+    <nav class="fixed left-0 top-1/2 -translate-y-1/2 z-50 px-4 sm:px-6 lg:px-8">
+        <div class="vertical-nav flex flex-col items-center space-y-8">
+            <a href="../index.html" class="nav-link text-sm tracking-widest">Home</a>
+            <a href="../index.html#about" class="nav-link text-sm tracking-widest">About Me</a>
+            <a href="../index.html#projects" class="nav-link text-sm tracking-widest">Projects</a>
+            <a href="../blogs.html" class="nav-link text-sm tracking-widest font-bold">Blogs</a>
+        </div>
+    </nav>
+ 
+    <article class="max-w-3xl mx-auto px-4 py-20">
+        <header class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Functions Run Everything / Exploring cuML</h1>
+            <div class="flex items-center text-gray-500 text-sm mb-8">
+                <time datetime="2024-02-19">Feb 12, 2024</time>
+                <span class="mx-2">•</span>
+                <span>4 min read</span>
+            </div>
+            <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+        </header>
+
+        <div class="prose dark:prose-invert max-w-none">
+            <p class="text-xl text-gray-700 dark:text-gray-300 mb-6">
+                "Functions run everything" — Prof. Rushan Ziatdinov. Data powers functions.
+            </p>
+            
+            <p class="mb-4">
+                Or so I'd like to tell you, from my data-centric point of view. Plainly speaking, it could be a bias ¯\_(ツ)_/¯, but I believe data is the true catalyst that makes anything work (at least in ML).
+            </p>
+
+            <p class="mb-4">
+                From a machine learning perspective, data is the manpower behind every model. Without it, there are no models. No models = no predictions. The hunger for data is so intense that there are over 5,000 active data centers in the USA alone (Cloudscene).
+            </p>
+
+            <p class="mb-6">
+                It's no joke that massive corporations spend millions upon MILLIONS storing and crunching data. More data = more signal to learn from.
+            </p>
+
+            <p class="mb-6">
+                As we know, a model's complexity only shines if there's enough data. Otherwise, volume beats sophistication.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">So... what's this even about?</h2>
+            
+            <p class="mb-4">
+                Did I just waste your time? I know data is useful. Why am I telling you this?
+            </p>
+
+            <p class="mb-6">
+                Because loads of data is everywhere, it needs to be processed faster. There need to be more efficient ways to crunch it. Today, most people use GPUs with deep learning frameworks like TensorFlow or Keras, bringing in sophisticated models of all sorts. Let's move back from what we know—why not have a GPU-powered scikit-learn? Training "simple" models with massive volumes of data at blazing speed? Isn't that the best?
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Enter cuML by NVIDIA</h2>
+            
+            <p class="mb-4">
+                cuML is part of NVIDIA's RAPIDS suite: a set of open-source, GPU-accelerated libraries built to supercharge data science and machine learning workflows. It ships with GPU-optimized implementations of popular ML algorithms like Random Forests, k-Nearest Neighbors, PCA, k-Means, etc.
+            </p>
+
+            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg my-6">
+                <pre class="text-sm"><code class="language-python">%%load_ext cuml.accel
+# Your existing scikit-learn code here</code></pre>
+            </div>
+
+            <p class="mb-6">
+                The craziest thing is it's "Zero-Code Change Acceleration"
+            </p>
+
+            <p class="mb-6">
+                As their docs show, just by adding the magic command above on top of your existing scikit-learn workflows, things like <code>.fit()</code> and <code>.predict()</code> seamlessly offload to the GPU.
+            </p>
+
+            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg my-6">
+            <pre class="text-sm"><code class="language-python">
+%%load_ext cuml.accel
+# Certain operations in common ML libraries (sklearn, umap, hdbscan)
+# are now GPU accelerated
+
+from sklearn.datasets import make_regression
+from sklearn.linear_model import ElasticNet
+
+X, y = make_regression(n_samples=1_000_000)
+
+model = ElasticNet()
+model.fit(X, y)   # runs on GPU!
+model.predict(X)  # runs on GPU!
+            </code></pre>
+            </div>
+            
+            <p class="text-sm text-gray-500 mb-6">
+                <a href="https://docs.rapids.ai/api/cuml/stable/cuml-accel/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
+                    Source: RAPIDS cuML Acceleration Documentation
+                </a>
+            </p>
+
+            <p class="mb-6">
+                If that isn't cool, I don't know what is. In a world where data volume keeps climbing, this kind of acceleration isn't just "nice to have". it's setting the bar up!
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Looking Ahead</h2>
+            
+            <p class="mb-6">
+                But let's think even further ahead. What about specialized accelerators? TPUs? NPUs? What about running frameworks on those DL frameworks? Would we even have enough data at that time? Many questions, no easy answers ~(˘▾˘~)
+            </p>
+
+            <p class="text-2xl font-light mt-12 mb-16 text-center">
+                Stay Curious
+            </p>
+        </div>
+    </article>
+
+    <script src="../script.js"></script>
+</body>
+</html>

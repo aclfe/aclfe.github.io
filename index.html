@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kairav Mittal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body class="relative">
+    
+    <nav class="fixed left-0 top-1/2 -translate-y-1/2 z-50 px-4 sm:px-6 lg:px-8">
+        <div class="vertical-nav flex flex-col items-center space-y-8">
+            <a href="blogs.html" class="nav-link text-sm tracking-widest">Blogs</a>
+            <a href="#about" class="nav-link text-sm tracking-widest">About Me</a>
+            <a href="#projects" class="nav-link text-sm tracking-widest">Projects</a>
+            <a href="#home" class="nav-link text-sm tracking-widest font-bold">Home</a>
+        </div>
+    </nav>
+
+    <aside class="fixed right-0 top-1/2 -translate-y-1/2 z-50 px-4 sm:px-6 lg:px-8">
+        <button id="dark-mode-toggle" class="vertical-nav nav-link text-sm tracking-widest dark-mode-toggle">dark mode.</button>
+    </aside>
+
+    <div class="absolute top-0 left-0 right-0 h-px bg-gray-300"></div>
+
+    <section id="home" class=" bg-gray-50 section flex items-center justify-center ">
+        <main class="text-center">
+            <h2 class="font-pixel text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-800">
+                Kairav Mittal<span class="blinking-cursor">_</span>
+            </h2>
+        </main>
+    </section>
+
+    
+    <section id="about" class="section section-fade-in py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="mb-16">
+                <h2 class="font-pixel text-3xl sm:text-4xl md:text-5xl text-gray-800 mb-4">
+                    About me
+                </h2>
+                <div class="w-16 h-1 bg-black"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+                
+                <div class="lg:col-span-2 space-y-6">
+                    <h3 class="text-2xl font-semibold text-gray-800">Kairav Mittal</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Kairav Mittal is an AI and DevOps enthusiast who likes to get his hands dirty building things—sometimes useful, sometimes just for fun. 
+                        He enjoys experimenting with random software ideas, not because they always have a grand purpose, but because the process of making something new excites him. 
+                        Whether it’s fine-tuning systems, automating workflows, or coding up a quirky side project, Kairav blends curiosity with practicality, always chasing that spark of “let’s see what happens if I try this.”
+                    </p>
+                    <div class="flex space-x-6 text-sm text-gray-500 uppercase tracking-wide">
+                        <span>GITHUB</span>
+                        <span>EMAIL</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4">I've had experiences with</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>AWS Cloud Services</li>
+                        <li>Docker Containers</li>
+                        <li>Kubernetes Orchestration</li>
+                        <li>Jenkins CI/CD</li>
+                        <li>Terraform Infrastructure</li>
+                        <li>Git Version Control</li>
+                        <li>Linux Systems</li>
+                        <li>Raspberry PIs</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4">I have years of experience with</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>Machine Learning Models</li>
+                        <li>Neural Networks</li>
+                        <li>Data Processing</li>
+                        <li>TensorFlow & PyTorch</li>
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision</li>
+                        <li>API Development</li>
+                        <li>System Architecture</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4">I work and study about</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>MLOps Practices</li>
+                        <li>AI Model Deployment</li>
+                        <li>Cloud Architecture</li>
+                        <li>Microservices</li>
+                        <li>Infrastructure as Code</li>
+                        <li>Anything that's cool :)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="section section-fade-in py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="mb-16">
+                <h2 class="font-pixel text-3xl sm:text-4xl md:text-5xl text-gray-800 mb-4">
+                    Projects
+                </h2>
+                <div class="w-16 h-1 bg-black"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-1 lg:order-2">
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <h3 class="text-2xl font-semibold text-gray-800">QLab</h3>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com/aclfe/QLab" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            A quantum computing laboratory project that explores quantum algorithms and simulations. QLab provides tools and environments for experimenting with quantum computing concepts, making quantum computing more accessible to researchers and enthusiasts.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-sm">
+                            <span class="text-gray-700">Qiskit</span>
+                            <span class="text-gray-400">•</span>
+                            <span class="text-gray-700">Quantum Computing</span>
+                            <span class="text-gray-400">•</span>
+                            <span class="text-gray-700">Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-2 lg:order-1">
+                    <div class="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
+                        <div class="h-48 bg-gray-100 rounded flex items-center justify-center">
+                            <span class="text-gray-400 text-sm">QLab Project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <h3 class="text-2xl font-semibold text-gray-800">Arcana</h3>
+                                <div class="flex space-x-2">
+                                    <a href="https://github.com/aclfe/Arcana" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                A powerful and versatile project that showcases advanced programming concepts and innovative solutions. Arcana demonstrates expertise in software development and problem-solving through clean, efficient code and well-structured architecture.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-sm">
+                                <span class="text-gray-700">Python</span>
+                                <span class="text-gray-400">•</span>
+                                <span class="text-gray-700">Machine Learning</span>
+                                <span class="text-gray-400">•</span>
+                                <span class="text-gray-700">Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
+                            <div class="h-48 bg-gray-100 rounded flex items-center justify-center">
+                                <span class="text-gray-400 text-sm">Arcana Project</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <h3 class="text-2xl font-semibold text-gray-800">StegIntelligence</h3>
+                                <div class="flex space-x-2">
+                                    <a href="https://github.com/aclfe/StegIntelligence" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                An advanced steganography project that combines data hiding techniques with artificial intelligence. StegIntelligence enables secure information hiding within digital media while using machine learning to enhance both the capacity and undetectability of hidden data.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-sm">
+                                <span class="text-gray-700">Python</span>
+                                <span class="text-gray-400">•</span>
+                                <span class="text-gray-700">TensorFlow</span>
+                                <span class="text-gray-400">•</span>
+                                <span class="text-gray-700">Computer Vision</span>
+                                <span class="text-gray-400">•</span>
+                                <span class="text-gray-700">Cryptography</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
+                            <div class="h-48 bg-gray-100 rounded flex items-center justify-center">
+                                <span class="text-gray-400 text-sm">StegIntelligence Project</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
