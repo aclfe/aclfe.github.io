@@ -149,7 +149,7 @@
                 </div>
                 <div class="order-2 lg:order-1">
                     <div class="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                        <button class="thumb-wrapper image-thumb w-full h-48 rounded overflow-hidden focus:outline-none" data-full-src="images/qlabdisplay.png" aria-label="Open QLab image">
+                        <button class="image-card click-to-view thumb-wrapper image-thumb w-full h-48 rounded overflow-hidden focus:outline-none" data-full-src="images/qlabdisplay.png" aria-label="Open QLab image">
                             <img src="images/qlabdisplay.png" alt="QLab preview" class="thumb-img w-full h-full object-cover" loading="lazy">
                             <div class="thumb-overlay">Click to view</div>
                         </button>
@@ -185,7 +185,8 @@
                     </div>
                     <div class="order-1 lg:order-2">
                         <div class="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                            <button class="thumb-wrapper image-thumb w-full h-48 rounded overflow-hidden focus:outline-none" data-full-src="images/arcanadisplay.png" aria-label="Open Arcana image">
+                            <!-- ADDED click-to-view class -->
+                            <button class="click-to-view thumb-wrapper image-thumb w-full h-48 rounded overflow-hidden focus:outline-none" data-full-src="images/arcanadisplay.png" aria-label="Open Arcana image">
                                 <img src="images/arcanadisplay.png" alt="Arcana preview" class="thumb-img w-full h-full object-cover" loading="lazy">
                                 <div class="thumb-overlay">Click to view</div>
                             </button>
@@ -198,7 +199,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="order-1 lg:order-1">
                         <div class="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                            <button class="thumb-wrapper image-thumb w-full h-48 rounded overflow-hidden focus:outline-none" data-full-src="images/steginteliigencedisplay.png" aria-label="Open StegIntelligence image">
+                            <button class="click-to-view thumb-wrapper image-thumb w-full h-48 rounded overflow-hidden focus:outline-none" data-full-src="images/steginteliigencedisplay.png" aria-label="Open StegIntelligence image">
                                 <img src="images/steginteliigencedisplay.png" alt="StegIntelligence preview" class="thumb-img w-full h-full object-cover" loading="lazy">
                                 <div class="thumb-overlay">Click to view</div>
                             </button>
@@ -237,6 +238,15 @@
             </div>
         </div>
     </section>
+
+    <div id="image-modal" class="fixed inset-0 z-50 bg-black/70 items-center justify-center" style="display: none;">
+        <div class="relative max-w-4xl w-[90%] mx-auto">
+            <button id="close-modal" class="absolute top-2 right-2 bg-white/80 text-gray-800 rounded px-3 py-1 shadow">Close</button>
+            <img id="modal-img" src="" alt="" class="w-full h-auto rounded shadow-lg">
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="click.js"></script>
 </body>
 </html>
