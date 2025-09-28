@@ -241,9 +241,4 @@ body.dark .blog-content code {
 
 .dark-mode-toggle {
     cursor: pointer;
-    user-select: none;
-}
-
-.dark-mode-toggle:hover {
-    opacity: 0.8;
 }
