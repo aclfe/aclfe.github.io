@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reality of Open Source - Kairav Mittal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+    <nav class="fixed left-0 top-1/2 -translate-y-1/2 z-50 px-4 sm:px-6 lg:px-8">
+        <div class="vertical-nav flex flex-col items-center space-y-8">
+            <a href="../index.html" class="nav-link text-sm tracking-widest">Home</a>
+            <a href="../index.html#about" class="nav-link text-sm tracking-widest">About Me</a>
+            <a href="../index.html#projects" class="nav-link text-sm tracking-widest">Projects</a>
+            <a href="../blogs.html" class="nav-link text-sm tracking-widest font-bold">Blogs</a>
+        </div>
+    </nav>
+ 
+    <article class="max-w-3xl mx-auto px-4 py-20">
+        <header class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">The Reality of Open Source: Lessons from Checkstyle</h1>
+            <div class="flex items-center text-gray-500 text-sm mb-8">
+                <time datetime="2026-03-01">Mar 01, 2026</time>
+                <span class="mx-2">•</span>
+                <span>4 min read</span>
+            </div>
+            <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+        </header>
+
+        <div class="prose dark:prose-invert max-w-none">
+            <p class="mb-6">
+                I think a lot of people have glamorized ideas about open sourcing. It's the ticket to "making a change" and standing out. With the growth of AI, this idea rarely comes with reality.
+                The growth of AI has made coding accessible to everyone, but this also means that code quality and maintenance are more important than ever. 
+                Code has to be verified and not be sloppy, the components have to piece together and be scalable. Updates have to regard documentation and make a multitude of changes. 
+            </p>
+            
+            <p class="mb-6">
+                Since December 2025 I've been contributing to <strong>Checkstyle</strong>, one of the most widely used Java static analysis tools. What I learned in just a few months completely changed how I view open source.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">1. Maintenance is Forever</h2>
+            <p class="mb-6">
+                The moment your PR is merged, you're taking ownership and have to live up to the future of it. Especially for a rigid project like Checkstyle, where every change must be carefully considered and tested.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">2. The CI Pipeline Marathon</h2>
+            <p class="mb-6">
+                Checkstyle's CI is no joke: GitHub Workflows, CircleCI, Azure Pipelines: all running on every single PR. Multiple JDK versions, spelling checks, full test suites, regression tests etc. One small change can break 12 different jobs. I've spent 90% of my time fixing CI than writing actual code.
+                Coming into open sourcing, you'll have to be patient with your PRs. I appreciate the CI jobs that make sure components are still working after new AI code is pushed from PRs. Truth be told, maintainers can't always be 100% free and look at PRs super intensely. The CI jobs are the real magic here.
+            </p>
+
+            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg my-6">
+                <pre class="text-sm"><code># After I make changes, I run
+./mvnw clean verify
+
+#If that passes, I git push and wait for the CI to finish.
+#They're way more intensive than local tests. 
+</code></pre>
+            </div>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">3. Even a Variable Name Matters</h2>
+            <p class="mb-6">
+                For example in a style-checker project, naming isn't nitpicking, it plays a huge role. I've seen many issues where users were concered about a check's function and it was a naming issue that can't be easily resolved.
+                Rather than making changes and potentially break too much, sometimes you'll have to let it go and live with it. That's a pity. 
+            </p>
+
+
+            <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+
+
+            Overall, I've learnt a lot about the process of making software from open sourcing. The whole idea is hard only because we have to be user focused, not look at the software from coding eyes.  
+
+            <p class="text-2xl font-light mt-12 mb-16 text-center">
+                Stay Curious
+            </p>
+        </div>
+    </article>
+
+    <script src="../script.js"></script>
+</body>
+</html>
